@@ -31,4 +31,29 @@ class User:
         return information from the userslist
         '''
         return cls.userslist
-        
+    @classmethod
+    def find_by_number(cls,number):
+        '''
+        method that takes in a username and returns a user that matches that number
+        '''
+        for user in cls.userslist:
+            if user.password==number:
+                return user
+    @classmethod
+    def user_exist(cls,number):
+        for user in cls.userslist:
+            if user.username==number:
+                return True
+            # return False
+    class Credentials:
+        '''
+        class that generate new instances of Credentials
+        '''
+        accounts=[]
+        def _init_(self,accountusername,accountname,accountpassword):
+            '''
+            _init_method helps us define properties for our object self
+            '''
+            self.accountusername=accountusername
+            self.accountname=accountname
+            self.accountpassword=accountpassword
