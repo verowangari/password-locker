@@ -57,3 +57,9 @@ class User:
             self.accountusername=accountusername
             self.accountname=accountname
             self.accountpassword=accountpassword
+            def save_account(self):
+                '''
+                save_account:method that saves users info into accounts
+                '''
+                Credentials.accounts.append(self)
+            def
