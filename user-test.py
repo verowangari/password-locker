@@ -25,9 +25,9 @@ def test_save_user(self):
     '''
     self.new_user.save_user()#save new contact
     self.asserEqual(len(User.user_list),1)
-def test_delete_user(self):
+def test_delete_contact(self): #*****!!test delete user or contact???
     '''
-    
+    test_delete_contact:test if we can remove contact from contact list
     '''
     self.new_contact.save_contact()
     test_user=User("Test","User","0712345678","test@user.com") #new contact
@@ -35,7 +35,7 @@ def test_delete_user(self):
     
     self.new_user.delete_user()#deleting a contact object
     self.assertEqual(len(User.user_list),1)
-if _name_=='_main_':
+if __name__ == '__main__':
     unittest.main()
         
     
