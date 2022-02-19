@@ -62,4 +62,22 @@ class User:
                 save_account:method that saves users info into accounts
                 '''
                 Credentials.accounts.append(self)
-            def
+            def delete_account(self):
+                '''
+                delete_account: method that deletes a saved credential from accounts
+                '''
+    @classmethod
+    def display_accounts(cls):
+        '''
+        method to return a list of accounts
+        '''
+        for account in cls.accounts:
+            return cls.display_accounts
+        @classmethod
+        def find_by_number(cls,number):
+            '''
+            method that takes in a number and returns a contact that matches that number
+            '''
+            for account in cls.accounts:
+                if account.accountusername==number:
+                    return account
