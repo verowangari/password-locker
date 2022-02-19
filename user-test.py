@@ -1,4 +1,6 @@
 import unittest
+
+from pip import main
 from user import User 
 
 class Testuser(unittest.TestCase):
@@ -23,4 +25,17 @@ def test_save_user(self):
     '''
     self.new_user.save_user()#save new contact
     self.asserEqual(len(User.user_list),1)
+def test_delete_user(self):
+    '''
+    
+    '''
+    self.new_contact.save_contact()
+    test_user=User("Test","User","0712345678","test@user.com") #new contact
+    test_user.save_user()
+    
+    self.new_user.delete_user()#deleting a contact object
+    self.assertEqual(len(User.user_list),1)
+if _name_=='_main_':
+    unittest.main()
+        
     
