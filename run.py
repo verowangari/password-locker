@@ -47,7 +47,36 @@ def main():
             print("account created successfully. These are the details")
             print ("_"*10)
             print(f"Name:{firstname} {lastname} \nUsername:{username} \nPassword:{userpassword}")
+            print("\n Login in to your account")
             print("\n \n")
+        elif option =="LG":
+            print("your Username..")
+            loginUsername=input()
+            print("Your password")
+            loginPassword=input()
+            if find_user(loginPassword):
+                print("\n")
+                print(" You can create multiple Accounts (AC) and also view Accounts (VC) ")
+                print("_"*60)
+                print("AC -or- VC")
+                choose=input()
+                print("\n")
+                if choose == "AC":
+                    print("Add your Cred Account")
+                    print("_"*25)
+                    accountUsername=loginUsername
+                    print("Account Name")
+                    accountname=input()
+                    print("Generate automatic password (G) or create new password")
+                    decision=input()
+                    if decision=="G":
+                        characters=string.ascii_letters + string.digits
+                        accountpassword="".join(choice(characters)for x in range(randint(6,16)))
+                        print(f"Password: {accountpassword}")
+                    
+                    
+                    
+                    
             
     
 
