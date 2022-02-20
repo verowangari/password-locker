@@ -5,6 +5,16 @@
 
 ### Description
 An application that allows users to create an account for managing their passwords. A user can also delete accounts password he no longer needs.
+#### User Stories
+These are the behaviours/features that the application implements for use by a user.
+
+As a user I would like:
+
+* To create an account with my details - log in and password
+* Store my existing login credentials
+* Generate a password for a new credential/account
+
+
 ### Setup Installation
 * Fork from Github
 #### Clone this repository
