@@ -64,7 +64,7 @@ def main():
                 if choose == "AC":
                     print("Add your Cred Account")
                     print("_"*25)
-                    accountUsername=loginUsername
+                    accountusername=loginUsername
                     print("Account Name")
                     accountname=input()
                     print("Generate automatic password (G) or create new password")
@@ -73,18 +73,30 @@ def main():
                         characters=string.ascii_letters + string.digits
                         accountpassword="".join(choice(characters)for x in range(randint(6,16)))
                         print(f"Password: {accountpassword}")
-                    
-                    
-                    
-                    
-            
-    
-
-
-
-
-
-
+                    elif decision=="C":
+                        print("Enter your password")
+                        accountpassword=input()
+                    else:
+                        print("please put in a valid choice")
+                    save_account(create_account)(accountusername,accountname,accountpassword)
+                    print("\n")
+                    print(f"Username:{accountusername}\nAccount Name:{accountname}\nPassword:{accountpassword}")
+                elif choose=="VC":
+                    if find_account(accountusername):
+                        print("This is the list of your created accounts:")
+                        print("_"*25)
+                        for user in display_accounts():
+                            print(f"Account:{user.accountname}\nPassword:{user.accountpassword}")
+                    else:
+                        print("Invalid Credentials")
+                else:
+                    print("please try again!")
+                    print("\n")
+            else:
+                print("Incorrect information,please try again!")
+                print("\n")
+        else: print("Kindly choose a valid option")
+        print("\n")
 if __name__ == '__main__':
 
     main()
