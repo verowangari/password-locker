@@ -1,7 +1,7 @@
 from numbers import Number
 import string
 from random import *
-
+from user import Credentials
 from click import option
 from user import User
 # from user import Credentials
