@@ -45,7 +45,7 @@ def main():
             print("Account created successfully. These are the details:")
             print ("_"*10)
             print(f"Name:{firstname} {lastname} \nUsername:{username} \nPassword:{userpassword}")
-            print("\n Login in to your account!")
+            print("\n Input Login to log in to your account below!")
             print("\n \n")
         elif option =="Login":
             print("your Username..")
@@ -60,7 +60,7 @@ def main():
                 choose=input()
                 print("\n")
                 if choose == "AC":
-                    print("Add your Cred Account")
+                    print("Add your Account")
                     print("_"*25)
                     accountusername=loginUsername
                     print("Account Name")
