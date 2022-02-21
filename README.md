@@ -5,7 +5,7 @@
 
 ### Description
 An application that allows users to create an account for managing their passwords. A user can also delete accounts password he no longer needs.
-#### User Stories
+## User Stories
 These are the behaviours/features that the application implements for use by a user.
 
 As a user I would like:
