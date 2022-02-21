@@ -1,6 +1,6 @@
 import random
 import string
-
+# import Credentials
 class User:
     '''
     Class that generates a new instance of users
@@ -18,7 +18,7 @@ class User:
         '''
         save_user:method that saves user info into the userslist
         '''
-        User.userlist.append(self)
+        User.userslist.append(self)
     def delete_user(self):
         '''
         delete_user: method that deletes a saved user from the userslist
@@ -45,7 +45,7 @@ class User:
             if user.username==number:
                 return True
             # return False
-    class Credentials:
+class Credentials:
         '''
         class that generate new instances of Credentials
         '''
@@ -57,27 +57,28 @@ class User:
             self.accountusername=accountusername
             self.accountname=accountname
             self.accountpassword=accountpassword
-            def save_account(self):
+        def save_account(self):
                 '''
                 save_account:method that saves users info into accounts
                 '''
                 Credentials.accounts.append(self)
-            def delete_account(self):
+        def delete_account(self):
                 '''
                 delete_account: method that deletes a saved credential from accounts
                 '''
-    @classmethod
-    def display_accounts(cls):
-        '''
-        method to return a list of accounts
-        '''
-        for account in cls.accounts:
-            return cls.display_accounts
-    @classmethod
-    def find_by_number(cls,number):
+                Credentials.accounts.remove(self)
+        @classmethod
+        def display_accounts(cls):
             '''
-            method that takes in a number and returns a contact that matches that number
+            method to return a list of accounts
             '''
             for account in cls.accounts:
-                if account.accountusername==number:
-                    return account
+                return cls.accounts
+        @classmethod
+        def find_by_number(cls,number):
+                '''
+                method that takes in a number and returns a contact that matches that number
+                '''
+                for account in cls.accounts:
+                    if account.accountusername==number:
+                        return account

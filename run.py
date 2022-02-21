@@ -1,10 +1,8 @@
-from numbers import Number
 import string
 from random import *
 from user import Credentials
 from click import option
 from user import User
-# from user import Credentials
 def create_user(firstname,lastname,username,userpassword):
     newuser= User(firstname,lastname,username,userpassword)
     return newuser
@@ -30,9 +28,9 @@ def display_accounts():
 def main():
     while True:
         print("Welcome to Password Locker")
-        print("SU -or- LG ")
+        print("SignUp -or- Login ")
         option=input()
-        if option == "SU":
+        if option == "SignUp":
             print("Create Account")
             print ("_"*10)
             print ("Enter your first name...")
@@ -44,12 +42,12 @@ def main():
             print("Set your password")
             userpassword=input()
             save_user(create_user(firstname,lastname,username,userpassword))
-            print("account created successfully. These are the details")
+            print("Account created successfully. These are the details:")
             print ("_"*10)
             print(f"Name:{firstname} {lastname} \nUsername:{username} \nPassword:{userpassword}")
-            print("\n Login in to your account")
+            print("\n Login in to your account!")
             print("\n \n")
-        elif option =="LG":
+        elif option =="Login":
             print("your Username..")
             loginUsername=input()
             print("Your password")
@@ -67,7 +65,7 @@ def main():
                     accountusername=loginUsername
                     print("Account Name")
                     accountname=input()
-                    print("Generate automatic password (G) or create new password")
+                    print("Generate automatic password (G) or create new password (C)")
                     decision=input()
                     if decision=="G":
                         characters=string.ascii_letters + string.digits
